@@ -1,0 +1,139 @@
+body{
+    background-color: #fbfcfd;
+    font-family: 'Lato', sans-serif;
+}
+.day {
+    background:no-repeat center center;
+    background-size: cover;
+}
+.navbar {
+    background-color: transparent;
+}
+.navbar .navbar-brand img {
+    width: 130px;
+}
+.top-nav-collapse {
+    background: #000000;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #000000;
+    }
+}
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+.switch {
+    margin-top: 2rem;
+    padding: .8rem 4rem;
+    border: none;
+    background: linear-gradient(#6cf48c, #05a3bf);
+    color: #fff;
+    font-weight: bold;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.hideme {
+    opacity: 0;
+}
+
+.widget {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color:rgba(0,0,0,0.5);
+}
+.widget .widget-ui-checkbox__caption {
+    color: #fff;
+}
+
+.widget__startButton.btn-primary {
+    background: linear-gradient(to left, #6cf48c, #05a3bf);
+    color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+}
+.widget__routeTypeSwitch_toCR span {
+    color: #fff;
+}
+.widget .Select, .widget .Select div, .widget .Select input, .widget .Select span, .widget .widget-ui-input[readonly] {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.widget .form-control, .widget-passengers__trigger__title, .widget-passengers__trigger, .widget-passengers__trigger input {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.widget .widget-ui-datepicker {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.widget-passengers__content, .widget__addSegment {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.card-deck.card {
+    border: none;
+}
+.services .testimonial-card .card-up {
+    height: 75px;
+}
+.services .testimonial-card .avatar img {
+    width: 70%;
+}
+.btn-special {
+    padding: 14px!important;
+}
+.why .card-img-top {
+    height: 170px;
+    -webkit-border-radius:9px 9px 200px 366px / 9px 9px 130px 315px;
+    -moz-border-radius:9px 9px 200px 366px / 9px 9px 130px 315px; border-radius:9px 9px 200px 366px / 9px 9px 130px 315px;
+}
+.why .card, .reviews .card {
+    box-shadow: 0 4px 24px 0 rgba(167, 178, 193, 0.16);
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.user-img {
+    max-width: 69px;
+    max-height: 69px;
+}
+footer.page-footer .footer-copyright {
+    background-color: transparent;
+}
+@media (min-width: 768px){
+    .container-fluid{
+        width: 90%;
+    }
+    section {
+        margin-top: 5rem;
+    }
+}
+@media (max-width: 768px){
+    .stick {
+        margin-top: 1.5rem;
+    }
+    .btn-special{
+        width: 17%;
+    }
+    iframe {
+        margin-top: 2rem;
+    }
+    .view .full-bg-img .mask .container h1 {
+        display: none;
+    }
+}
+

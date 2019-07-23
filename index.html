@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Trip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/cards-extended.min.css ">
+    <!--Nemo widget-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700&subset=cyrillic">
+    <link rel="stylesheet" href="https://cdn.nemo.travel/search-form/v2.5.22/flights.search.widget.min.css">
+    <!--Custom styles-->
+    <style>
+        #sletat, .hidden {
+            display:none;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--Main Navigation-->
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="img-fluid" src="images/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Достижения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="view day" id="time">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <div class="container text-center white-text wow fadeInUp">
+                    <h1 class="pb-md-5">Smart Trip - сделает путешествие ярким и незабываемым!</h1>
+                    <div id="sletat" class="hidden">
+                        <div class="tv-search-form tv-moduleid-185754"></div>
+                        <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
+                    </div>
+                    <div id="root" class="mt-5"></div>
+                    <script src="https://cdn.nemo.travel/search-form/v2.5.22/flights.search.widget.min.js"></script>
+                    <script>
+                        // Полный список параметров перечислен в разделе "Конфигурация".
+                        FlightsSearchWidget.init({
+                            nemoURL: 'https://booking.akzholtour.kz',
+                            rootElement: document.getElementById('root'),
+                            locale: 'ru',
+                            verticalForm            : false,
+                            mode                    : 'NEMO',
+                            useNearestAirport       : true,
+                            highlightAvailableDates : true,
+                            vicinityDays            : 3,
+                            vicinityDatesMode       : true,
+                            directOnly              : true,
+                        });
+                    </script>
+                    <div class="text-center">
+                        <button class="showButton show switch" type="button" value="Click" onclick="switchVisible();">Поиск туров</button>
+                        <button class="hideButton hidden switch" type="button" value="Click" onclick="switchVisible();">Поиск Авиабилетов</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!--Main Navigation-->
+
+<!--Services content-->
+<section class="services pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 align-self-center">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <h2 class="font-weight-bold">
+                            Наши услуги и предложения специально для вас
+                        </h2>
+                        <p class="text-muted">
+                            Сервис покупки авиабилетов удобен для всех, кто ценит свое время и деньги, к тому же наши цены на авиабилеты приемлемы для всех!
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Card -->
+                        <div class="card testimonial-card">
+
+                            <!-- Background color -->
+                            <div class="card-up lighten-1"></div>
+
+                            <!-- Avatar -->
+                            <div class="avatar mx-auto white">
+                                <img src="images/Tour.png" class="rounded-circle img-fluid" alt="woman avatar">
+                            </div>
+
+                            <!-- Content -->
+                            <div class="card-body">
+                                <!-- Name -->
+                                <h5 class="card-title">Туры по всему миру</h5>
+                                <!-- Quotation -->
+                                <p class="text-muted">
+                                    Если вы готовы покинуть шумный город и отправиться в путешествие – предлагаем тур в любую точку мира.
+                                </p>
+                                <!--Buttons-->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn rounded">
+                                            Напомнить
+                                        </button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn aqua-gradient rounded">
+                                            Купить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Card -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Card -->
+                <div class="card testimonial-card stick">
+
+                    <!-- Background color -->
+                    <div class="card-up lighten-1"></div>
+
+                    <!-- Avatar -->
+                    <div class="avatar mx-auto white">
+                        <img src="images/railway.png" class="rounded-circle img-fluid" alt="woman avatar">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="card-body">
+                        <!-- Name -->
+                        <h5 class="card-title">Покупка Авиабилетов</h5>
+                        <!-- Quotation -->
+                        <p class="text-muted">
+                            Сервис покупки авиабилетов удобен для всех, к тому же наши цены на авиабилеты приемлемы для всех!
+                        </p>
+                        <!--Buttons-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn rounded">
+                                    Напомнить
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn aqua-gradient rounded">
+                                    Купить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Card -->
+
+                <!-- Card -->
+                <div class="card testimonial-card mt-4">
+
+                    <!-- Background color -->
+                    <div class="card-up lighten-1"></div>
+
+                    <!-- Avatar -->
+                    <div class="avatar mx-auto white">
+                        <img src="images/avia.png" class="rounded-circle img-fluid" alt="woman avatar">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="card-body">
+                        <!-- Name -->
+                        <h5 class="card-title">Покупка Ж/Д билетов</h5>
+                        <!-- Quotation -->
+                        <p class="text-muted">
+                            Покупка, заказ и бронирование
+                            Ж/Д билетов онлайн в Казахстане, не выходя из дома или офиса!
+                        </p>
+                        <!--Buttons-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn rounded">
+                                    Напомнить
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn aqua-gradient rounded">
+                                    Купить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--About-->
+<section class="about pt-5">
+    <div class="container">
+        <h2 class="font-weight-bold">
+            О компании
+        </h2>
+        <div class="pt-3">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <h4>
+                        Smart Trip - сделает путешествие ярким и незабываемым!
+                    </h4>
+                    <div class="text-muted">
+                        <p>
+                            Мы являемся туристической компанией с названием «Smart Trip», которая предлагает своим клиентам не только стандартные пакеты и горящие туры, но и подбирает уникальные «умные поездки».
+                        </p>
+                        <p>
+                            Сделайте Ваше путешествие неповторимым вместе с нами!
+                        </p>
+                        <p>
+                            Исходя из Ваших пожеланий и предпочтений, наша команда профессионалов оперативно подберет для Вас самые подходящие варианты тура. Ведь мы знаем о путешествиях всё!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/action-adult-adventure-1098365.png" alt="" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Why-->
+<section class="why pt-5">
+    <div class="container-fluid">
+        <h2 class="text-center font-weight-bold">
+            Почему туристы путешествуют с нами?
+        </h2>
+        <div class="card-deck pt-5 text-center">
+            <!-- Card -->
+            <div class="card">
+                <!-- Card image -->
+                <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
+                <!-- Card content -->
+                <div class="card-body">
+                    <!-- Title -->
+                    <p class="card-title font-weight-bold"><a>
+                        Доступные цены
+                    </a></p>
+                    <!-- Text -->
+                    <p class="card-text text-muted">
+                        Мы готовы предложить Вам туры любой сложности и по самым привлекательным ценам. У нас можно приобрести туры в рассрочку!
+                    </p>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+            <!-- Card 2-->
+            <div class="card">
+                <!-- Card image -->
+                <img class="card-img-top" src="images/2.jpg" alt="Card image cap">
+                <!-- Card content -->
+                <div class="card-body">
+                    <!-- Title -->
+                    <p class="card-title font-weight-bold"><a>
+                        Мы эксперты в туризме
+                    </a></p>
+                    <!-- Text -->
+                    <p class="card-text text-muted">
+                        Наши специалисты всегда готовы стать Вашим гидом в любом виде туризма. Мы поможем выбрать страну для отдыха, расскажем о  достопримечательностях, подберем экскурсии и расскажем о развлечениях во время путешествия.
+                    </p>
+                </div>
+
+            </div>
+            <!-- Card 2-->
+
+            <!-- Card 3-->
+            <div class="card">
+                <!-- Card image -->
+                <img class="card-img-top" src="images/3.jpg" alt="Card image cap">
+                <!-- Card content -->
+                <div class="card-body">
+                    <!-- Title -->
+                    <p class="card-title font-weight-bold"><a>
+                        С нами Вы сэкономите силы и время
+                    </a></p>
+                    <!-- Text -->
+                    <p class="card-text text-muted">
+                        В зависимости от Ваших предпочтений, мы подберем для Вас лучшие варианты путешествия! Уютные отели для отдыха с детьми, романтические поездки, молодежные туры и многое другое. У нас индивидуальный подход к каждому клиенту!
+                    </p>
+                </div>
+
+            </div>
+            <!-- Card 3-->
+
+            <!-- Card 4-->
+            <div class="card">
+                <!-- Card image -->
+                <img class="card-img-top" src="images/4.jpg" alt="Card image cap">
+                <!-- Card content -->
+                <div class="card-body">
+                    <!-- Title -->
+                    <p class="card-title font-weight-bold"><a>
+                        Безопасность
+                    </a></p>
+                    <!-- Text -->
+                    <p class="card-text text-muted">
+                        Мы позаботимся о безопасности и комфорте нашего туриста во время путешествия.
+                    </p>
+                </div>
+
+            </div>
+            <!-- Card 4-->
+
+            <!-- Card 5-->
+            <div class="card">
+                <!-- Card image -->
+                <img class="card-img-top" src="images/5.jpg" alt="Card image cap">
+                <!-- Card content -->
+                <div class="card-body">
+                    <!-- Title -->
+                    <p class="card-title font-weight-bold"><a>
+                        Мы всегда с Вами на связи 24/7
+                    </a></p>
+                    <!-- Text -->
+                    <p class="card-text text-muted">
+                        Для нас важен Ваш комфорт! Поэтому мы готовы в любое время ответить на все ваши вопросы.
+                    </p>
+                </div>
+
+            </div>
+            <!-- Card 5-->
+        </div>
+    </div>
+</section>
+
+<!--Special-->
+<section class="special pt-5">
+    <div class="container-fluid">
+        <h2 class="font-weight-bold">
+            Наши услуги и предложения специально для вас
+        </h2>
+        <p class="text-muted py-4">
+            Наше профессиональное турагентство подберет оптимальный вариант именно для Вас!
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h4 class="btn-special text-center rounded-circle text-white blue-gradient">01</h4>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="font-weight-bold">
+                                    Подбор и бронирование пакетных туров в любую страну
+                                </p>
+                                <p>
+                                    · Оформление визы
+                                    <br>· Авиаперелет, автобус, поезд
+                                    <br>· Страховка
+                                    <br>· Проживание
+                                    <br>· Трансфер
+                                    <br>· Питание
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h4 class="btn-special text-center rounded-circle text-white peach-gradient">02</h4>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="font-weight-bold">
+                                    Организация экскурсий, деловых поездок, семинаров, спортивных мероприятий
+                                </p>
+                                <p>
+                                    · Аренда автомобилей
+                                    <br>· Все виды трансфера
+                                    <br>· Сопровождение гида
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row pb-5">
+                            <div class="col-md-3">
+                                <h4 class="btn-special text-center rounded-circle text-white ripe-malinka-gradient">03</h4>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="font-weight-bold">
+                                    Продажа авиа и ж/д билетов с нашим партнером Transavia.kz
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row pb-5">
+                            <div class="col-md-3">
+                                <h4 class="btn-special text-center rounded-circle text-white deep-blue-gradient">04</h4>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="font-weight-bold">
+                                    Бронирование отелей, аппартаментов, вилл и хостелов по всему миру
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row pb-5">
+                            <div class="col-md-3">
+                                <h4 class="btn-special text-center rounded-circle text-white near-moon-gradient">05</h4>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="font-weight-bold">
+                                    Туры в рассрочку!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h4 class="btn-special text-center rounded-circle text-white dusty-grass-gradient">06</h4>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="font-weight-bold">
+                                    Быстрое оформление туров
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid" src="images/special.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Reviews-->
+<section class="reviews pt-5">
+    <div class="container">
+        <h2 class="text-center font-weight-bold">
+            Отзывы наших клиентов
+        </h2>
+        <div class="card-deck pt-5">
+            <!-- Card -->
+            <div class="card">
+                <!-- Card content -->
+                <div class="card-body">
+                    <ul class="list-unstyled list-inline rating mb-0">
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                    </ul>
+                    <!-- Text -->
+                    <p class="card-text pt-3">
+                        «Благодаря компании Smart Trip мы с семьей смогли полететь в Куала -Лумпур и отдохнули круто, спасибо!"
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="avatar mx-auto white">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-8 align-self-center">
+                            <p class="font-weight-bold">
+                                Анель Жакупова
+                                <span class="text-muted font-weight-light">
+                                    <br>Куала-Лумпур, Май 2019
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card -->
+
+            <!-- Card -->
+            <div class="card">
+                <!-- Card content -->
+                <div class="card-body">
+                    <ul class="list-unstyled list-inline rating mb-0">
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                    </ul>
+                    <!-- Text -->
+                    <p class="card-text pt-3">
+                        «Благодаря компании Smart Trip мы с семьей смогли полететь в Куала -Лумпур и отдохнули круто, спасибо!"
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="avatar mx-auto white">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-8 align-self-center">
+                            <p class="font-weight-bold">
+                                Анель Жакупова
+                                <span class="text-muted font-weight-light">
+                                    <br>Куала-Лумпур, Май 2019
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card -->
+
+            <!-- Card -->
+            <div class="card">
+                <!-- Card content -->
+                <div class="card-body">
+                    <ul class="list-unstyled list-inline rating mb-0">
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"> </i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                        <li class="list-inline-item mr-0"><i class="fas fa-star amber-text"></i></li>
+                    </ul>
+                    <!-- Text -->
+                    <p class="card-text pt-3">
+                        «Благодаря компании Smart Trip мы с семьей смогли полететь в Куала -Лумпур и отдохнули круто, спасибо!"
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="avatar mx-auto white">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" alt="avatar mx-auto white" class="rounded-circle img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-8 align-self-center">
+                            <p class="font-weight-bold">
+                                Анель Жакупова
+                                <span class="text-muted font-weight-light">
+                                    <br>Куала-Лумпур, Май 2019
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card -->
+        </div>
+    </div>
+</section>
+
+<!--Contacts-->
+<section class="contacts pt-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 align-self-center">
+                <h2 class="font-weight-bold">
+                    Наш адрес
+                </h2>
+                <p>
+                    г. Алматы, ул. 22-Линия, д. 45, 3 этаж, офис 316
+                </p>
+                <p>Телефон: +7 777 730 20 20, +7 777 713 17 17</p>
+                <a href="#" class="btn aqua-gradient btn-rounded">
+                    <i class="fab fa-instagram pr-1"></i>
+                    Подписаться в Instagram
+                </a>
+            </div>
+            <div class="col-md-6">
+                <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3A72094c35da41e0dfa3103e7b0c5ab4076da343dad402283db328e13d102fe382&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="page-footer font-small lighten-5">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5 pt-5">
+
+        <!-- Grid row -->
+        <div class="row mt-3 dark-grey-text">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+                <!-- Content -->
+                <img class="img-fluid" src="images/logo%20smarttrip.svg" width="100" alt="">
+                <p class="pt-3">
+                    «Smart Trip» сделает путешествие ярким и незабываемым!
+                </p>
+                <!-- Social buttons -->
+                <ul class="list-unstyled list-inline text-center">
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-fb mx-1">
+                            <i class="fab fa-facebook-f"> </i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-gplus mx-1">
+                            <i class="fab fa-google-plus-g"> </i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-li mx-1">
+                            <i class="fab fa-linkedin-in"> </i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn-floating btn-dribbble mx-1">
+                            <i class="fab fa-dribbble"> </i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Social buttons -->
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">О компании</h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a class="dark-grey-text" href="#!">Преимущества</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#!">Достижения</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#!">Отзывы клиентов</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#!">Call - center</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Услуги</h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a class="dark-grey-text" href="#!">Туры</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#!">Туры в рассрочку</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#!">Авиабилеты</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#!">Ж/Д билеты</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Контакты</h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fas fa-home mr-3"></i> Г. Алматы, ул. 22-Линия, д. 45, 3 этаж, офис 316</p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> +7 777 730 20 20</p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> +7 777 713 17 17</p>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50 py-3">© 2019 все права защищены
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+<!--  SCRIPTS  -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!--MDB cards-->
+<script src="js/cards.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript">
+    var currentTime = new Date().getHours();
+    if (7 <= currentTime && currentTime < 20) {
+        if (document.body) {
+            document.getElementById("time").style.backgroundImage = "url('images/day.jpg')";
+        }
+    }
+    else {
+        if (document.body) {
+            document.getElementById("time").style.backgroundImage = "url('images/night.jpg')";
+        }
+    }
+</script>
+<script type="text/javascript">
+
+    $(function () {
+
+        $('.showButton').click(function () {
+
+            $('.hidden').show();
+
+            $('.show').hide();
+
+        });
+
+        $('.hideButton').click(function () {
+
+            $('.hidden').hide();
+
+            $('.show').show();
+
+        });
+
+    });
+
+</script>
+</body>
+</html>
